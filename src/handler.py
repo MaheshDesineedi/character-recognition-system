@@ -7,8 +7,8 @@ import csv
 import json
 
 #input and output buckets
-input_bucket = "546proj2inputbucket"
-output_bucket = "546proj2outputbucket"
+input_bucket = "inputbucket"
+output_bucket = "outputbucket"
 
 #initializing S3
 s3client = boto3.resource('s3', region_name='us-east-1')
@@ -34,7 +34,7 @@ def face_recognition_handler(event, context):
     s3client.Bucket(bucket).download_file(key, local_path)
 
     #fetch encoding data
-    encoding_data = encoding("encoding")
+    encoding_data = encoding("../encoding")
 
     #extracting frame from video 
     path = "/tmp/"

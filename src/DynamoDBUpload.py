@@ -27,7 +27,7 @@ def getItem():
 
 def upload():
     # read data from file
-    with open('./student_data.json', 'r') as f:
+    with open('student_data.json', 'r') as f:
         data = json.load(f)
 
     # insert data into table

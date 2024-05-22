@@ -4,8 +4,8 @@ import time
 
 session = boto3.Session(profile_name='default')
 
-input_bucket='546proj2inputbucket'
-output_bucket='546proj2outputbucket'
+input_bucket='inputbucket'
+output_bucket='outputbucket'
 
 s3 = session.resource('s3')
 ip_bucket = s3.Bucket(input_bucket)
